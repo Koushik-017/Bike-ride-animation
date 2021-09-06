@@ -1,0 +1,198 @@
+/*// BASE STYLES //*/
+
+html, body{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.grass, .sky, .road{
+  position: relative;
+}
+
+.sky{
+  height: 40%;
+  background-color:skyblue;
+  
+}
+
+.grass{
+  height: 30%;
+  background: green;
+  z-index: -3;
+  
+}
+
+.road{
+  height: 30%;
+  background:dimgray;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+  z-index: -2;
+  position: relative;
+ 
+}
+
+.lines{
+  box-sizing: border-box;
+  border: 5px solid rgb(231, 20, 13);
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+}
+.liness{
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  border: 5px solid rgb(231, 231, 25);
+  top:55%;
+  height: 0;
+  z-index: -1;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+#driver1,#driver2{
+position: absolute;
+}
+#driver1{
+  top: -70px;
+left: 100px;
+animation-direction: alternate;
+animation-name: moveright ;
+animation-duration: 10s;
+animation-timing-function:linear; 
+animation-fill-mode: both; 
+}
+
+#driver2{
+  top: 10px;
+left: 900px;
+transform: rotateY(180deg);
+ animation-direction: alternate-reverse;
+animation-name: moveright;
+animation-duration: 10s;
+animation-timing-function:linear;
+animation-fill-mode: both; 
+}
+
+.sky:hover{
+  background-color: black;
+  background-image: url(moon1.jpeg);
+  background-repeat: no-repeat;
+
+  
+  
+}
+.clouds{
+  position: absolute;
+  /* background: red; */
+left:30px;
+animation-name: movecloud;
+animation-duration: 5s;
+animation-iteration-count:infinite ;
+animation-direction: normal;
+animation-timing-function: linear;
+
+}
+
+#cloud4{
+  margin-left: 400px;
+}
+
+
+
+@keyframes rotatedriver {
+  0% {transform: rotateY(0deg);}
+  100% {transform: rotateY(180deg);}
+}
+  
+
+
+@keyframes move{
+  0% {left: 900px;}
+  100% {left: 100px;}
+  
+}
+
+@keyframes moveright{
+  0% {left: 100px;}
+  100% {left: 900px;}
+  
+}
+
+
+@keyframes movecloud{
+  from{
+    left:30px
+  }
+  to{
+    left:150px;
+  }
+}
+@keyframes reverse{
+  from{
+transform: (180);
+  }
+}
+
+}.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+#cloud1:hover{
+  width:200px;
+  content: url(k.jpeg);
+}#cloud2:hover{
+  width:200px;
+  content: url(o.jpeg);
+}
+#cloud3:hover{
+  width:200px;
+  content: url(ui.jpeg);
+}#cloud4:hover{
+  width:200px;
+  content: url(s.jpeg);
+}
+#cloud5:hover{
+  width:200px;
+  content: url(h.jpeg);
+}
+#cloud6:hover{
+  width:200px;
+  content: url(i.jpg);
+}
+p {
+  display: none;
+  background-color: yellow;
+  position: absolute;
+  
+}
+
+div :hover p {
+  display: block;
+position: relative;
+}
+
